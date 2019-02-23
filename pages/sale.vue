@@ -1,10 +1,10 @@
 <template>
   <main class="capsule">
     <div class="saleimg">
-      <app-masthead img="bk-sale" title="Sale" bkcolor="#1ba079"/>
+      <app-mastheadtoo img="banner-ppl_shared_shopping" imght="355" title="Shared Shopping" bkcolor="#0f9f97"/>
     </div>
     <div class="contain">
-      <app-sidebar :pricerange.sync="highprice" :sale="true"/>
+      <app-sidebar :pricerange.sync="highprice" :sale="true" :org="false"/>
       <transition-group name="items" tag="section" class="content">
         <app-item
           v-for="(item, index) in sProducts"
@@ -19,18 +19,18 @@
 
 <script>
 import AppSidebar from './../components/AppSidebar.vue';
-import AppMasthead from './../components/AppMasthead.vue';
+import AppMastheadtoo from './../components/AppMastheadtoo.vue';
 import AppItem from './../components/AppItem.vue';
 
 export default {
   components: {
     AppSidebar,
-    AppMasthead,
+    AppMastheadtoo,
     AppItem
   },
   data() {
     return {
-      highprice: 300
+      highprice: 120
     };
   },
   computed: {

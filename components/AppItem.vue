@@ -1,9 +1,10 @@
 <template>
   <div class="item">
     <p>{{ item.name }}</p>
-    <span class="salepill" v-if="item.sale">Sale</span>
+    <span class="supermarketpill" v-if="item.sale">Organic</span>
     <img :src="`/${item.img}`" :alt="`Image of ${item.name}`">
     <p>{{ item.price | usdollar }}</p>
+    <p>{{ item.price | ksh }}</p>
     <button class="add" @click="addItem">Add Item</button>
   </div>
 </template>
@@ -23,7 +24,11 @@ export default {
   filters: {
     usdollar: function(value) {
       return `$${value}`;
+    },
+    ksh: function(value) {
+      return `ksh $${value*100}`;
     }
+
   },
   methods: {
     addItem() {
@@ -45,7 +50,7 @@ export default {
   position: relative;
 }
 
-.salepill {
+.supermarketpill {
   background: rgb(232, 35, 25);
   color: white;
   font-family: 'Barlow', sans-serif;
@@ -54,7 +59,7 @@ export default {
   top: 60px;
   padding: 2px 10px 4px;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 700;
   border-radius: 1000px;
 }

@@ -41,7 +41,7 @@ body {
 
 .footer,
 .push {
-  height: 50px;
+  height: 250px;
   margin-top: 10px;
 }
 </style>

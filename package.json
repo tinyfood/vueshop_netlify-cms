@@ -1,8 +1,8 @@
 {
-  "name": "shop",
+  "name": "tinyfood",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "sdras <sarah.drasner@gmail.com>",
+  "description": "Farm to consumer knowledgebase & buyer group hubs",
+  "author": "scdhub <acmeideal@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",

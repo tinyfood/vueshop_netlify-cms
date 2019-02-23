@@ -80,7 +80,9 @@ button:hover {
   color: white;
   transition: 0.2s all ease-in;
 }
-
+.ppl-banner {
+  width:1117px;
+}
 *,
 *:before,
 *:after {

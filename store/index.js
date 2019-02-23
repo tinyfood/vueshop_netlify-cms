@@ -5,114 +5,273 @@ const createStore = () => {
     state: {
       cartTotal: 0,
       cart: {},
-      sale: false,
       products: [
         {
-          name: 'Khaki Suede Polish Work Boots',
-          price: 149.99,
-          category: 'women',
+          name: 'Arugula (1 lb.)',
+          price: 3.99,
+          category: 'produce',
           sale: true,
+          org: true,
           article: 'shoe',
-          img: 'shoe1.png'
+          img: 'arugula.jpg',
+          producer: 'greg',
+          proximity: '10'
         },
         {
-          name: 'Camo Fang Backpack Jungle',
-          price: 39.99,
-          category: 'women',
+          name: 'Beets (2 lb.)',
+          price: 2.99,
+          category: 'produce',
           sale: false,
-          article: 'jacket',
-          img: 'jacket1.png'
+          org: true,
+          article: 'staples',
+          img: 'beetroot-1.jpg',
+          producer: 'greg',
+          proximity: '10'
         },
         {
-          name: 'Parka and Quilted Liner Jacket',
-          price: 49.99,
-          category: 'men',
+          name: 'Kale (1 lb.)',
+          price: 2.99,
+          category: 'produce',
           sale: true,
-          article: 'jacket',
-          img: 'jacket2.png'
+          org: true,
+          article: 'greens',
+          img: 'kale.jpg',
+          producer: 'greg',
+          proximity: '10'
+
         },
         {
-          name: 'Cotton Black Cap',
-          price: 12.99,
-          category: 'men',
+          name: 'Piglets',
+          price: 90.00,
+          category: 'farm',
           sale: true,
+          org: true,
+          article: 'animals',
+          img: 'piglets.jpg',
+          producer: 'greg',
+          proximity: '10'
+        },
+        {
+          name: 'Swiss Chard (1 lb.)',
+          price: 2.99,
+          category: 'staples',
+          sale: true,
+          org: true,
           article: 'hats',
-          img: 'hat1.png'
+          img: 'chard.jpg',
+          producer: 'greg',
+          proximity: '10'
         },
         {
-          name: 'Knit Sweater with Zips',
+          name: 'Plums (2 lb. basket)',
+          price: 2.99,
+          category: 'produce',
+          sale: true,
+          org: false,
+          article: 'fruit',
+          img: 'plums.jpg',
+          producer: 'greg',
+          proximity: '10'
+        },
+        {
+          name: 'Strawberries (1 lb. basket)',
           price: 29.99,
-          category: 'women',
-          sale: false,
-          article: 'sweater',
-          img: 'sweater1.png'
-        },
-        {
-          name: 'Long Linen-blend Shirt',
-          price: 18.99,
-          category: 'men',
-          sale: false,
-          article: 'shirt',
-          img: 'shirt1.png'
-        },
-        {
-          name: 'Knit Orange Sweater',
-          price: 28.99,
-          category: 'men',
-          sale: false,
-          article: 'sweater',
-          img: 'sweater2.png'
-        },
-        {
-          name: 'Cotton Band-collar Blouse',
-          price: 49.99,
-          category: 'men',
-          sale: false,
-          article: 'shirt',
-          img: 'shirt2.png'
-        },
-        {
-          name: 'Camo Fang Backpack Jungle',
-          price: 59.99,
-          category: 'women',
+          category: 'produce',
           sale: true,
-          article: 'jacket',
-          img: 'jacket3.png'
+          org: true,
+          article: 'fruit',
+          img: 'strawberries.jpg',
+          producer: 'greg',
+          proximity: '10'
         },
         {
-          name: 'Golden Pilot Jacket',
-          price: 129.99,
-          category: 'women',
-          sale: false,
-          article: 'jacket',
-          img: 'jacket4.png'
-        },
-        {
-          name: 'Spotted Patterned Sweater',
-          price: 80.99,
-          category: 'women',
-          sale: false,
-          article: 'jacket',
-          img: 'sweater4.png'
-        },
-        {
-          name: 'Double Knit Sweater',
-          price: 59.99,
-          category: 'men',
+          name: 'Peaches (1 lb. basket)',
+          price: 2.99,
+          category: 'produce',
           sale: true,
+          org: true,
+          article: 'fruit',
+          img: 'peaches.jpg',
+          producer: 'greg',
+          proximity: '10'
+        },
+        {
+          name: 'Collard Greens (1 lb.)',
+          price: 1.99,
+          category: 'produce',
+          sale: true,
+          org: true,
+          article: 'greens',
+          img: 'collardgreens.jpg',
+          producer: 'greg',
+          proximity: '10',
+          source: '274 Organics',
+          desc: 'these greens are delicate and delicious, grown at 8400 foot elevation'
+        },
+        {
+          name: 'Mizuna Mustard Greens (1 lb.)',
+          price: 1.99,
+          category: 'staples',
+          sale: true,
+          org: true,
+          article: 'greens',
+          img: 'mizuna.png',
+          producer: 'greg',
+          proximity: '15',
+          source: '274 Organics',
+          desc: 'these greens are delicate and delicious, grown at 8400 foot elevation'
+        },
+        {
+          name: 'Basil ( 1 oz.)',
+          price: 3.99,
+          category: 'produce',
+          sale: true,
+          org: true,
+          article: 'greens',
+          img: 'basil.jpg',
+          producer: 'greg',
+          proximity: '10'
+        },
+        {
+          name: 'Lettuce ( ~1 lb head.)',
+          price: 1.79,
+          category: 'produce',
+          sale: true,
+          org: true,
+          article: 'greens',
+          img: 'lettuce.jpg',
+          producer: 'greg',
+          proximity: '10'
+        },
+        {
+          name: 'Fresh Rosemary Herbs ( 0.5 oz)',
+          price: 2.99,
+          category: 'herbs',
+          sale: true,
+          org: true,
+          article: 'herbs',
+          img: 'rosemary.jpg',
+          producer: 'greg',
+          proximity: '10'
+        },
+        {
+          name: 'Snow Peas ( 1 lb.)',
+          price: 4.99,
+          category: 'staples',
+          sale: true,
+          org: true,
           article: 'jacket',
-          img: 'sweater5.png'
+          img: 'snowpeas.jpg',
+          producer: 'greg',
+          proximity: '10'
+
+        }
+      ],
+      farmers: [
+        {
+          name: 'Woody',
+          business: 'Magnolia Grown Meats',
+          region: 'Colorado Front Range' ,
+          farming_style: 'meat production',
+          address: '',
+          email: '',
+          phone: '',
+          insta: 'magnoliagrownbeef',
+          liason: 'geog',
+          seasonal_orders_avail: 'geoghub'
+        },
+        {
+          name: 'greg',
+          business: '274 Organics',
+          region: 'Colorado Front Range' ,
+          farming_style: 'medicinals',
+          address: '',
+          email: '',
+          phone: '',
+          insta: 'ecocitylearningportal',
+          liason: 'geog',
+          seasonal_orders_avail: 'geoghub'
+        }
+      ],
+      selling_style: [
+        {
+          name: 'Woody',
+          farming_style: 'meat production',
+          sales: 'pay before hub dropoff',
+          seasonal_orders_avail: 'true'
+        }
+      ],
+      customer: [
+        {
+          name: 'Geog',
+          business: 'SCD Hub',
+          region: 'Colorado Front Range' ,
+          farming_style: 'medicinals,herbs,seeds,',
+          address: '274 W. Spring St, Nederland, CO 80466',
+          email: 'greg@scdhub.org',
+          phone: '303 720 6790',
+          insta: 'ecocitylearningportal',
+          faceyboo: 'ecocity',
+          liason: 'reid',
+          driver: 'reid',
+          seasonal_orders_avail: 'geoghub'
+        }
+      ],
+      orders: [
+        {
+          orderID: '0000001',
+          region: 'Colorado Front Range' ,
+          farming_style: 'medicinals,herbs,seeds,',
+          address: '274 W. Spring St, Nederland, CO 80466',
+          email: 'greg@scdhub.org',
+          phone: '303 720 6790',
+          insta: 'ecocitylearningportal',
+          faceyboo: 'ecocity',
+          liason: 'reid',
+          driver: 'reid',
+          seasonal_orders_avail: 'geoghub'
+        }
+      ],
+      order_items: [
+        {
+          itemID: '0000001',
+          orderID: '0000001',
+          name: 'perch',
+          source: '420 Anglers',
+          amount: '2 lb',
+          price: '$4'
+        },
+        {
+          itemID: '0000002',
+          orderID: '0000001',
+          name: 'beef prime cut',
+          source: 'Woody',
+          amount: '3 lb',
+          price: '$45'
         }
       ]
     },
     getters: {
-      women: state => filter(state.products, 'category', 'women'),
-      men: state => filter(state.products, 'category', 'men'),
-      sale: state => filter(state.products, 'sale', true)
+      produce: state => filter(state.products, 'category', 'produce'),
+      herbs: state => filter(state.products, 'category', 'herbs'),
+      medicinals: state => filter(state.products, 'category', 'medicinals'),
+      meats: state => filter(state.products, 'category', 'meats'),
+      farm: state => filter(state.products, 'category', 'farm'),
+      staples: state => filter(state.products, 'category', 'staples'),
+      sale: state => filter(state.products, 'sale', true),
+      org: state => filter(state.products, 'org', true),
+      pvol: state => filter(state.products, 'pvol', true)
+
     },
     mutations: {
       switchSale: state => {
         state.sale = !state.sale;
+      },
+      switchOrg: state => {
+        state.org = !state.org;
+      },
+      switchPvol: state => {
+        state.pvol = !state.pvol;
       },
       clearCartCount: state => {
         state.cartTotal = 0;

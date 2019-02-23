@@ -1,7 +1,7 @@
 <template>
   <aside>
     <div class="sidearea">
-      <label for="pricerange">Highest Price: <span>${{ pricerange }}</span></label>
+      <label for="pricerange">Sort by price/lb: <span>${{ pricerange }}</span></label>
       <input 
         class="slider" 
         id="pricerange" 
@@ -15,15 +15,21 @@
       <span class="min">${{ min }}</span>
       <span class="max">${{ max }}</span>
     </div>
+  
     <app-switch v-if="!sale" />
     <div class="sidearea callout">
-      <h4>Special Sale!</h4>
-      <p>Shop now because half our items are greatly reduced</p>
+      <p>Share the shopping!</p>
     </div>
     <div class="sidearea callout">
-      <h4>Contact Us</h4>
-      <p>Questions? Call us at 1-888-555-SHOP, we're happy to be of service.</p>
+      <h4>Help grow Tiny Food!</h4>
+      <p>Share TinyFood with someone or a group you order with.</p>
     </div>
+ <button html="Start a hub" alt="Start a hub" text="Start a hub"></button>
+
+   <div class="sidearea callout">
+      <img src="onebuilding_foodan1.gif">
+   </div> 
+    </app-switch>
   </aside>
 </template>
 
@@ -38,13 +44,13 @@ export default {
     },
     pricerange: {
       type: [Number, String],
-      default: 300
+      default: 8.50
     }
   },
   data() {
     return {
       min: 0,
-      max: 400
+      max: 120
     };
   },
   components: {

@@ -1,12 +1,13 @@
 <template>
   <div class="sidearea">
-    <h4>Only Show Sale Items</h4>
+    <h4>Farmer direct only</h4>
     <div class="can-toggle demo-rebrand-2">
       <input id="e" type="checkbox" v-model="trigger" @change="updateSale">
       <label for="e">
         <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
       </label>
     </div>
+
   </div>
 </template>
 
